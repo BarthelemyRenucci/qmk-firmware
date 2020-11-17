@@ -17,6 +17,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+#include <stdbool.h>
+
 //Define number of ISSI3733 drivers being used (1...16)
 #define ISSI3733_DRIVER_COUNT 2
 #define DRIVER_LED_TOTAL ISSI3733_LED_COUNT
@@ -176,4 +178,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define USB_LED_SCROLL_LOCK_SCANCODE    255
     #define USB_LED_COMPOSE_SCANCODE        255
     #define USB_LED_KANA_SCANCODE           255
+    #define USB_LED_FN_SCANCODE             71
 #endif //USB_LED_INDICATOR_ENABLE
+bool is_fn_activated(void);
+
