@@ -181,4 +181,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define USB_LED_FN_SCANCODE             71
 #endif //USB_LED_INDICATOR_ENABLE
 bool is_fn_activated(void);
+bool is_gam_activated(void);
 
