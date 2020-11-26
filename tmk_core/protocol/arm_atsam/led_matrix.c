@@ -326,6 +326,16 @@ void led_matrix_indicators(void) {
 	            }
             }
 #endif // FN
+#if USB_LED_ENTER_SCANCODE != 255
+            if (led_map[i].scan == USB_LED_ENTER_SCANCODE) {
+	            if (is_gam_activated()) {
+		            led_buffer[i].r = 255 - led_buffer[i].r;
+		            led_buffer[i].g = 255 - led_buffer[i].g;
+		            led_buffer[i].b = 255 - led_buffer[i].b;
+	            }
+            }
+#endif // HOME
+
         }
     }
 }
